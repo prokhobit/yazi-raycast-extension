@@ -1,4 +1,5 @@
 ###------ Open Yazi with Raycast ------###
+
 If you hate finder and use raycast and yazi for your cli file manager, then this here is for you!
 A simple [Raycast](https://raycast.com) Script Command that opens the [Yazi](https://github.com/sxyazi/yazi) terminal file manager in your default Terminal app!
 

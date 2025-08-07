@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "title": "Open yazi",
+  "description": "Launches the Yazi terminal file browser in your default terminal at the current Finder location.",
+  "author": "prokhobit",
+}
