@@ -3,4 +3,14 @@
   "title": "Open yazi",
   "description": "Launches the Yazi terminal file browser in your default terminal at the current Finder location.",
   "author": "prokhobit",
+  "commands": [
+    {
+      "name": "Open Yazi",
+      "title": "Open Yazi in Terminal",
+      "description": "Opens Yazi in your default terminal",
+      "mode": "no-view",
+      "script": "./yazi.sh"
+    }
+  ]
 }
+
