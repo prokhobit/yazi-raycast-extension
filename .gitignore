@@ -1,0 +1,18 @@
+###------ macOS sys files ------###
+.DS_Store
+
+###------ Thumbnails and other media assets ------###
+*.png
+*.jpg
+*.jpeg
+*.ico
+*.svg
+
+###------ Misc editor files ------###
+*~
+
+###------ Raycast dev stuff ------###
+raycast-dev/
+
+###------ Logs ------###
+*.log
