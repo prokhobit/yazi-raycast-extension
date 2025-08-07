@@ -66,7 +66,7 @@ if [[ -n "$1" ]]; then
 fi
 
 ###------ Finally launch yazi in your terminal ------###
-if [[ "$terminal_cmd" == "terminal" ]]; then
+if [[ "$terminal_cmd" == "ghostty" ]]; then
   osascript <<EOF
 tell application "Terminal"
   activate
