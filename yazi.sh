@@ -24,14 +24,14 @@ else
 fi
 
 ###------ Check if yazi is installed ------###
-if ! command -v >/dev/null 2>&1; then
+if ! command -v yazi >/dev/null 2>&1; then
   PROMPT=$(
     osascript <<EOF
 display dialog "yazi is not installed. Would you like to install the latest version?" buttons {"No", "Yes"} default button "Yes" with title "yazi not found"
 EOF
   )
 
-  if [["$PROMPT" == *"Yes"*]]; then
+  if [[ "$PROMPT" == *"Yes"* ]]; then
     if command -v brew >/dev/null 2>&1; then
       osascript -e 'display notification "updating homebrew..." with title "yazi installer"'
       brew update
@@ -62,16 +62,16 @@ EOF
 
 ###------ If found, use the $DIR ------###
 if [[ -n "$1" ]]; then
-  $DIR="$1"
+  DIR="$1"
 fi
 
 ###------ Finally launch yazi in your terminal ------###
-if [[ "$terminal_cmd" == "open -a Terminal" ]]; then
+if [[ "$terminal_cmd" == "terminal" ]]; then
   osascript <<EOF
-  tell application "Terminal"
-    activate
-    do script "yazi \"$DIR\""
-  end tell
+tell application "Terminal"
+  activate
+  do script "cd \"$DIR\" && yazi"
+end tell
 EOF
 else
   "$terminal_cmd" -e yazi "$DIR" &
